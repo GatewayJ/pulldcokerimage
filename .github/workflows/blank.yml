@@ -27,7 +27,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker pull  k8s.gcr.io/coredns/coredns:v1.8.6          
-          docker tag k8s.gcr.io/coredns/coredns:v1.8.6   gatewayj/k8s.gcr.io:coredns:coredns:v1.8.6          
+          docker tag k8s.gcr.io/coredns/coredns:v1.8.6   gatewayj/k8s.gcr.io-coredns-coredns:v1.8.6          
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -38,4 +38,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push to Docker Registry
         run: |
-          docker push  gatewayj/k8s.gcr.io:coredns:coredns:v1.8.6 
+          docker push  gatewayj/k8s.gcr.io-coredns-coredns:v1.8.6 
